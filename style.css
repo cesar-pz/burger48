@@ -199,6 +199,15 @@ h1 span { display: block; color: #D9A066; font-size: 0.62em; letter-spacing: 3px
 .howto { color: var(--ink-soft); line-height: 1.5; }
 .howto b { color: var(--ink); }
 
+.credits {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 2px dashed #F2E2CD;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.credits a { color: var(--ketchup-dark); font-weight: 600; }
+
 /* ---------- recipe card ---------- */
 
 .recipe-card {
