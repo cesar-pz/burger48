@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2048 Burgers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <main class="main">
+      <header class="header">
+        <h1>2048 <span>BURGERS</span></h1>
+        <div class="scores">
+          <div class="score-box" id="score-box"><small>Score</small><b id="score">0</b></div>
+          <div class="score-box"><small>Best</small><b id="best">0</b></div>
+        </div>
+      </header>
+
+      <div class="controls">
+        <p class="tagline">Stack the layers to build the <b>2048 burger!</b></p>
+        <button id="new-game" class="btn">New Game</button>
+      </div>
+
+      <div class="board" id="board">
+        <div class="grid">
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="tiles" id="tiles"></div>
+        <div class="message" id="message" hidden>
+          <h2 id="message-title"></h2>
+          <p id="message-text"></p>
+          <div class="message-actions">
+            <button id="keep-going" class="btn btn-alt">Keep stacking</button>
+            <button id="try-again" class="btn">New burger</button>
+          </div>
+        </div>
+      </div>
+
+      <label class="toggle">
+        <input type="checkbox" id="show-numbers">
+        <span>Show the math on tiles</span>
+      </label>
+
+      <p class="howto">
+        <b>How to play:</b> use your <b>arrow keys</b> (or swipe) to slide the tiles.
+        When two matching burgers touch, they <b>stack into one</b> with an extra layer.
+      </p>
+    </main>
+
+    <aside class="recipe-card">
+      <h2>The Recipe</h2>
+      <p class="recipe-intro">Every merge <b>doubles</b> the value, and adds one layer.
+        Count the layers and you've found the exponent!
+        Today's sauce: <b id="sauce-name"></b></p>
+      <ol class="recipe" id="recipe"></ol>
+    </aside>
+  </div>
+
+  <div class="fx" id="fx" aria-hidden="true"></div>
+
+  <script src="js/tiers.js"></script>
+  <script src="js/layers.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
